@@ -4,7 +4,7 @@ const path = require('path');
 const socket = require('socket.io');
 let tasks = [];
 
-app.use(express.static(path.join(__dirname, '/client'))); // Serve static files from the React app
+app.use(express.static(path.join(__dirname, '/client/build'))); // Serve static files from the React app
 app.use(express.urlencoded({ extended: false })); //x-www-form-urlencoded
 
 app.get('*', (req, res) => {

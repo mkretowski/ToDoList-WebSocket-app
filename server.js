@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, '/client/build'))); // Serve static 
 app.use(express.urlencoded({ extended: false })); //x-www-form-urlencoded
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/index.html'));
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 app.use((req, res) => {
